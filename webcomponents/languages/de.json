@@ -1,0 +1,14 @@
+[
+    {
+        "id": "alert-danger",
+        "text": "Etwas Schlimmes ist passiert",
+        "description": "Warnung allgemein",
+        "image": "webcomponents/images/alert-danger.svg"
+    },
+    {
+        "id": "alert-success",
+        "text": "Das hat geklappt",
+        "description": "Erfolgsmeldung allgemein",
+        "image": "webcomponents/images/alert-success.svg"
+    }
+]

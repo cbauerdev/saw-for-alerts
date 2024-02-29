@@ -1,0 +1,14 @@
+[
+    {
+        "id": "alert-danger",
+        "text": "Something bad happened.",
+        "description": "Warnung allgemein",
+        "image": "webcomponents/images/alert-danger.svg"
+    },
+    {
+        "id": "alert-success",
+        "text": "That went well",
+        "description": "Erfolgsmeldung allgemein",
+        "image": "webcomponents/images/alert-success.svg"
+    }
+]

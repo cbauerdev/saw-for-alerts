@@ -1,0 +1,33 @@
+.language-switcher {
+    width: 300px;
+    height: 100px;
+    background-color: #ececec;
+    color: #8d7f7f;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #535353;
+    border-radius: 5px;
+    display: flex; /* Flexbox */
+    justify-content: center; /* Platzierung der Elemente entlang der Hauptachse */
+    align-items: center; /* Zentrieren der Elemente entlang der Querachse */
+    margin: 5px;
+}
+
+#language-select {
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+#language-select:focus {
+    outline: none;
+    border-color: dodgerblue;
+}
+
+.language-label {
+    margin-right: 10px;
+}
