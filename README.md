@@ -16,8 +16,14 @@ To incorporate the alert components into your project, follow these steps:
 2. Utilize different components in your template:
 
 - `<language-switcher>`: Choose between German and English (Work in Progress).
+   ![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/8673457c-e87c-4554-9a05-e31672e5ce75)
+
 - `<alert-danger>`: Display a simple alert message for error notifications.
+   ![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/e6dfafbe-b4b6-4683-86b2-904e84718939)
+
 - `<alert-success>`: Display a simple success message.
+   ![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/8aee379f-c2a3-469f-87c1-7c55b573a758)
+
 
 Feel free to edit the template and CSS to match your preferences, but avoid altering CSS classes or the code might fail to function properly.
 
