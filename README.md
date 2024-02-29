@@ -18,7 +18,7 @@ To incorporate the alert components into your project, follow these steps:
 
 1. Place the `webcomponents` folder into the directory of the component that will utilize these web components.
 2. Include the corresponding.js file into your component.
-   f.e. in the template via `<script src="webcomponents/alerts/alerts.js" defer></script>
+   f.e. in the template via `<script src="webcomponents/alerts/alerts.js" defer></script>`
 4. Utilize different components in your template:
 
 - `<language-switcher>`: Choose between German and English (Work in Progress).
