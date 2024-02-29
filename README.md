@@ -51,7 +51,8 @@ To incorporate the alert components into your project, follow these steps:
 
 **template**: Define the template to be used.
 
-![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/95a60b69-e93c-48b0-b789-61ee72b6379c)
+![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/d72e62ca-14ce-4d85-a9e4-9d1d6fa17888)
+
 
 
 ### Now what?
