@@ -33,6 +33,7 @@ To incorporate the alert components into your project, follow these steps:
   
    ![grafik](https://github.com/cbauerdev/saw-for-alerts/assets/100590565/8aee379f-c2a3-469f-87c1-7c55b573a758)
 
+### Now what?
 
 Feel free to edit the template and CSS to match your preferences, but avoid altering CSS classes or the code might fail to function properly.
 
