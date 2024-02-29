@@ -4,6 +4,10 @@
 
 This repository contains a prototype library for web components designed to provide customizable alerts that can be easily integrated into software applications.
 
+### But why?
+
+Instead of repeatedly programming certain components from scratch within a software, it is advisable to use web components that can be integrated independently of frameworks and can be centrally managed.
+
 ### How to Initialize
 
 To begin development, you'll need a live server environment. If you're using Visual Studio Code with the Live Server plugin, simply right-click on the `index.htm` file and select "Open with Live Server".
