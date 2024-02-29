@@ -3,12 +3,24 @@
         "id": "alert-danger",
         "text": "Etwas Schlimmes ist passiert",
         "description": "Warnung allgemein",
-        "image": "webcomponents/images/alert-danger.svg"
+        "image": "webcomponents/images/kreuz.png",
+        "style": "alert-danger",
+        "template": "alert"
     },
     {
         "id": "alert-success",
         "text": "Das hat geklappt",
         "description": "Erfolgsmeldung allgemein",
-        "image": "webcomponents/images/alert-success.svg"
+        "image": "webcomponents/images/checked.png",
+        "style": "alert-success",
+        "template": "alert"
+    },
+    {
+        "id": "alert-warning",
+        "text": "Es könnte etwas passieren.",
+        "description": "Erfolgsmeldung allgemein",
+        "image": "webcomponents/images/warnung.png",
+        "style": "alert-warning",
+        "template": "alert"
     }
 ]

@@ -1,12 +1,12 @@
 .language-switcher {
     width: 300px;
     height: 100px;
-    background-color: #ececec;
-    color: #8d7f7f;
+    background-color: #f5f5f5; /* Hellgrau */
+    color: #333; /* Dunkelgrau */
     font-family: Arial, sans-serif;
     font-size: 16px;
     padding: 10px;
-    border: 2px solid #535353;
+    border: 2px solid #ccc; /* Hellgrau */
     border-radius: 5px;
     display: flex; /* Flexbox */
     justify-content: center; /* Platzierung der Elemente entlang der Hauptachse */
@@ -18,14 +18,14 @@
     width: 100px;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Hellgrau */
     background-color: white;
     cursor: pointer;
 }
 
 #language-select:focus {
     outline: none;
-    border-color: dodgerblue;
+    border-color: dodgerblue; /* Blau */
 }
 
 .language-label {

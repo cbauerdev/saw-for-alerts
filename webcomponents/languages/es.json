@@ -1,7 +1,7 @@
 [
     {
         "id": "alert-danger",
-        "text": "Something bad happened",
+        "text": "ESPANOL",
         "description": "Warnung allgemein",
         "image": "webcomponents/images/kreuz.png",
         "style": "alert-danger",
@@ -9,7 +9,7 @@
     },
     {
         "id": "alert-success",
-        "text": "That worked",
+        "text": "ESPANOL",
         "description": "Erfolgsmeldung allgemein",
         "image": "webcomponents/images/checked.png",
         "style": "alert-success",
@@ -17,7 +17,7 @@
     },
     {
         "id": "alert-warning",
-        "text": "Something bad could happen",
+        "text": "ESPANOL",
         "description": "Erfolgsmeldung allgemein",
         "image": "webcomponents/images/warnung.png",
         "style": "alert-warning",
