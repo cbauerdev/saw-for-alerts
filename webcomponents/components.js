@@ -82,28 +82,38 @@ function setupLanguageChangeListener(data) {
 }
 
 function updateAlertText(language) {
-  console.log('Lade Sprachendaten für Sprache:', language);
-  fetch(`webcomponents/languages/${language}.json`)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Netzwerkantwort war nicht erfolgreich');
-          }
-          return response.json();
-      })
-      .then(data => {
-          console.log('Sprachendaten erfolgreich geladen:', data);
-          removeCustomElements();
-          const success = generateAlerts(data);
-          if (success) {
-              console.log('Alerts wurden erfolgreich neu generiert.');
-          } else {
-              console.error('Fehler beim Generieren der Alerts.');
-          }
-      })
-      .catch(error => {
-          console.error('Fehler beim Laden der Sprachendaten:', error);
-      });
+    console.log('Lade Sprachendaten für Sprache:', language);
+    fetch(`webcomponents/languages/${language}.json`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht erfolgreich');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Sprachendaten erfolgreich geladen:', data);
+            const alertTextElement = document.getElementById('alert-text');
+            if (alertTextElement) {
+                console.log('Element mit der ID "alert-text" gefunden:', alertTextElement);
+                if (data && data.text) {
+                    alertTextElement.textContent = data.text;
+                    console.log('Alert-Text erfolgreich aktualisiert:', data.text);
+                } else {
+                    console.error('Kein Text in den Sprachendaten gefunden.');
+                }
+            } else {
+                console.error('Element mit der ID "alert-text" wurde nicht gefunden.');
+            }
+        })
+        .catch(error => {
+            console.error('Fehler beim Laden der Sprachendaten:', error);
+        });
 }
+
+
+
+
+
 
 class MultiLanguageComponent extends HTMLElement {
   constructor() {

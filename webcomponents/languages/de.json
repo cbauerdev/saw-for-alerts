@@ -22,5 +22,13 @@
         "image": "webcomponents/images/warnung.png",
         "style": "alert-warning",
         "template": "alert"
+    },
+    {
+        "id": "alert-test",
+        "text": "TEST",
+        "description": "Erfolgsmeldung allgemein",
+        "image": "webcomponents/images/warnung.png",
+        "style": "alert-warning",
+        "template": "alert"
     }
 ]

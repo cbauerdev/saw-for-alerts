@@ -2,14 +2,14 @@
     {
         "id": "alert-danger",
         "text": "Something bad happened",
-        "description": "Warnung allgemein",
+        "description": "Common Warning",
         "image": "webcomponents/images/kreuz.png",
         "style": "alert-danger",
         "template": "alert"
     },
     {
         "id": "alert-success",
-        "text": "That worked",
+        "text": "This",
         "description": "Erfolgsmeldung allgemein",
         "image": "webcomponents/images/checked.png",
         "style": "alert-success",
@@ -17,7 +17,7 @@
     },
     {
         "id": "alert-warning",
-        "text": "Something bad could happen",
+        "text": "Es könnte etwas passieren.",
         "description": "Erfolgsmeldung allgemein",
         "image": "webcomponents/images/warnung.png",
         "style": "alert-warning",
