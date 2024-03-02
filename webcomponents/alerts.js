@@ -1,9 +1,13 @@
+//Removes all webcomponents on reload
+
 function removeCustomElements() {
   const customElements = document.querySelectorAll('[id^="alert-"]');
   customElements.forEach(element => {
       element.remove();
   });
 }
+
+//Fetches the corresponding JSON
 
 document.addEventListener('DOMContentLoaded', function() {
   fetch('webcomponents/languages/de.json')
@@ -16,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error('Fehler beim Laden der JSON-Daten:', error);
       });
 });
+
+//Generates alerts based on JSON settings
 
 function generateAlerts(data) {
   let success = true;
@@ -39,8 +45,11 @@ function generateAlerts(data) {
                           tempElement.innerHTML = html.trim();
                           const template = tempElement.querySelector('#alert-template').content.cloneNode(true);
 
-                          const slot = template.querySelector('#alert-text');
-                          slot.textContent = data.text;
+                          const textslot = template.querySelector('#alert-text');
+                          textslot.textContent = data.text;
+
+                          const subtextslot = template.querySelector('#alert-subtext');
+                          subtextslot.textContent = data.subtext;
 
                           const img = template.querySelector('#alert-img');
                           img.setAttribute('src', data.image);
@@ -70,6 +79,8 @@ function generateAlerts(data) {
   return success;
 }
 
+//Listens for changes in language picker component
+
 function setupLanguageChangeListener(data) {
   const languageSelect = document.querySelector('#language-select');
   if (languageSelect) {
@@ -81,30 +92,45 @@ function setupLanguageChangeListener(data) {
   }
 }
 
+//updates the text in alerts
+
 function updateAlertText(language) {
-  console.log('Lade Sprachendaten für Sprache:', language);
-  fetch(`webcomponents/languages/${language}.json`)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Netzwerkantwort war nicht erfolgreich');
-          }
-          return response.json();
-      })
-      .then(data => {
-          console.log('Sprachendaten erfolgreich geladen:', data);
-          removeCustomElements();
-          const success = generateAlerts(data);
-          if (success) {
-              console.log('Alerts wurden erfolgreich neu generiert.');
-          } else {
-              console.error('Fehler beim Generieren der Alerts.');
-          }
-      })
-      .catch(error => {
-          console.error('Fehler beim Laden der Sprachendaten:', error);
-      });
+    console.log('Lade Sprachendaten für Sprache:', language);
+    fetch(`webcomponents/languages/${language}.json`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht erfolgreich');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Sprachendaten erfolgreich geladen:', data);
+            const customElements = document.querySelectorAll('[id^="alert-"]');
+            customElements.forEach(element => {
+                const shadow = element.shadowRoot;
+                if (shadow) {
+                    const alertTextElement = shadow.getElementById('alert-text');
+                    if (alertTextElement) {
+                        console.log('Element mit der ID "alert-text" gefunden:', alertTextElement);
+                        if (data && data.text) {
+                            alertTextElement.textContent = data.text;
+                            console.log('Alert-Text erfolgreich aktualisiert:', data.text);
+                        } else {
+                            console.error('Kein Text in den Sprachendaten gefunden.');
+                        }
+                    } else {
+                        console.error('Element mit der ID "alert-text" wurde nicht gefunden.');
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Fehler beim Laden der Sprachendaten:', error);
+        });
 }
 
+
+//Language picker
 class MultiLanguageComponent extends HTMLElement {
   constructor() {
       super();
@@ -149,17 +175,22 @@ class MultiLanguageComponent extends HTMLElement {
   }
 
   updateAlertText(language) {
-      console.log('Lade Sprachendaten für Sprache:', language);
-      fetch(`webcomponents/languages/${language}.json`)
-          .then(response => response.json())
-          .then(data => {
-              console.log('Sprachendaten erfolgreich geladen:', data);
-              removeCustomElements();
-          })
-          .catch(error => {
-              console.error('Fehler beim Laden der Sprachendaten:', error);
-          });
-  }
+    console.log('Lade Sprachendaten für Sprache:', language);
+    fetch(`webcomponents/languages/${language}.json`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Sprachendaten erfolgreich geladen:', data);
+            const customElements = this.shadowRoot.querySelectorAll('[id^="alert-"]');
+            customElements.forEach(element => {
+                element.remove();
+            });
+            generateAlerts(data);
+        })
+        .catch(error => {
+            console.error('Fehler beim Laden der Sprachendaten:', error);
+        });
+}
+
 
   loadCSS() {
       const linkElem = document.createElement('link');

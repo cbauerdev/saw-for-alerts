@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "text": "HERZLICH WILLKOMMEN",
+        "subtext":"Das ist eine Willkommensnachricht"
+    },
+    {
+        "id": 2,
+        "text": "AUF WIEDERSEHEN",
+        "subtext":"Das ist eine Verabschiedungsnachricht"
+    }
+]

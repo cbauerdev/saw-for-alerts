@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "text": "HELLO AND WELCOME",
+        "subtext":"This is a welcoming message"
+    },
+    {
+        "id": 2,
+        "text": "GOODBYE",
+        "subtext":"This is a goodbye message"
+    }
+]

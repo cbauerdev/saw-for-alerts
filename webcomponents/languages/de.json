@@ -2,7 +2,8 @@
     {
         "id": "alert-danger",
         "text": "Etwas Schlimmes ist passiert",
-        "description": "Warnung allgemein",
+        "subtext": "Bitte wenden Sie sich an einen Administrator",
+        "description": "Fehlermeldung allgemein",
         "image": "webcomponents/images/kreuz.png",
         "style": "alert-danger",
         "template": "alert"
@@ -11,6 +12,7 @@
         "id": "alert-success",
         "text": "Das hat geklappt",
         "description": "Erfolgsmeldung allgemein",
+        "subtext": "Keine weitere Handlung notwendig",
         "image": "webcomponents/images/checked.png",
         "style": "alert-success",
         "template": "alert"
@@ -18,15 +20,8 @@
     {
         "id": "alert-warning",
         "text": "Es könnte etwas passieren.",
-        "description": "Erfolgsmeldung allgemein",
-        "image": "webcomponents/images/warnung.png",
-        "style": "alert-warning",
-        "template": "alert"
-    },
-    {
-        "id": "alert-test",
-        "text": "TEST",
-        "description": "Erfolgsmeldung allgemein",
+        "subtext": "Sei vorsichtig, junger Padawan.",
+        "description": "Warnmeldung allgemein",
         "image": "webcomponents/images/warnung.png",
         "style": "alert-warning",
         "template": "alert"
